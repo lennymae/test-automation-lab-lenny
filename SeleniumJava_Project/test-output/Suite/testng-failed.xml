@@ -3,11 +3,11 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="test.java.ParaBank.SubmitCustomerInquiryTest">
+      <class name="test.java.Heroku.FileUploadTest">
         <methods>
-          <include name="testUserCreation"/>
+          <include name="testFileUpload"/>
         </methods>
-      </class> <!-- test.java.ParaBank.SubmitCustomerInquiryTest -->
+      </class> <!-- test.java.Heroku.FileUploadTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
