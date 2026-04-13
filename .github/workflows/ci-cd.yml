@@ -21,16 +21,20 @@ jobs:
           distribution: 'temurin'
           cache: maven
 
-      - name: Run Tests with Maven
+      - name: Set up ChromeDriver
+        uses: nanasess/setup-chromedriver@v2
+        with:
+          chromedriver-version: '131.0.6778.204'
+
+      - name: Run Tests with Maven and TestNG
         working-directory: ./SeleniumJava_Project
-        run: mvn clean test
+        run: mvn clean test -Dsurefire.suiteXmlFiles=testng.xml
         env:
-          # Run Chrome in headless mode (required for CI/CD)
           CHROME_OPTIONS: --headless --disable-gpu --no-sandbox
 
       - name: Upload Test Reports
         if: always()
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: test-reports
           path: ./SeleniumJava_Project/target/surefire-reports/
