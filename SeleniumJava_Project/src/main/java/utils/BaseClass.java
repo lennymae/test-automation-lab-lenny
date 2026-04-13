@@ -26,9 +26,18 @@ public class BaseClass {
 	
 	public void OpenSite(String url) 
 	{
-		WebDriverManager.chromedriver().setup();
-	    driver = new ChromeDriver();
+	    WebDriverManager.chromedriver().setup();
+	
+	    ChromeOptions options = new ChromeOptions();
+	    options.addArguments("--headless=new");
+	    options.addArguments("--no-sandbox");
+	    options.addArguments("--disable-dev-shm-usage");
+	    options.addArguments("--window-size=1920,1080");
+	    options.addArguments("--remote-allow-origins=*");
+	
+	    driver = new ChromeDriver(options);
 	    driver.get(url);
+	
 	    System.out.println("Site has been opened");
 	}
 	
