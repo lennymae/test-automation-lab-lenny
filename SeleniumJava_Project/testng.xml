@@ -3,8 +3,9 @@
 <suite name="Suite">
 <test thread-count="5" name="Test">
 <classes>
-<class name="test.java.Heroku.FileUploadTest"/>
 <!--
+<class name="test.java.Heroku.FileUploadTest"/>
+-->
 <class name="test.java.Heroku.AddProductTest"/>
 <class name="test.java.ParaBank.UserCreationTest"/>
 <class name="test.java.Heroku.AddElementTest"/>
@@ -14,7 +15,6 @@
 <class name="test.java.Heroku.FormAuthenticationTest"/>
 <class name="test.java.Heroku.HorizontalSliderTest"/>
 <class name="test.java.Heroku.InputValidationTest"/>
--->
 </classes>
 </test>
 </suite>
